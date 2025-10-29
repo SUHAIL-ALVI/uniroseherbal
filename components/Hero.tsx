@@ -38,7 +38,7 @@ const HeroSection = () => {
             </h1>
             <p className="text-lg mt-10 pt-10 md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
               Welcome to Unirose Herbals, where Ayurveda meets modern wellness.
-              Guided by &quot;Nature&apos;s Cure&quot; — we create safe,
+              Guided by <span className="text-green-500 font-bold">&quot;Nature&apos;s Cure&quot;</span> we create safe,
               effective herbal solutions for a healthier life.
             </p>
 

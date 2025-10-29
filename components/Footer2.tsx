@@ -22,7 +22,7 @@ const Footer = () => {
                 About
               </Link>
               <Link
-                href="/contact"
+                href="/About/AboutFooter"
                 className="text-slate-500 hover:text-white transition-colors duration-300"
               >
                 Contact

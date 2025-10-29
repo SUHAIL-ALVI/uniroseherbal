@@ -147,6 +147,20 @@ const Navbar = () => {
                 </Link>
               </motion.div>
 
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.3 }} // Added delay for staggered effect
+              >
+                <Link
+                  href="/About/AboutFooter"
+                  className="text-gray-700 hover:text-green-500 px-4 py-3 rounded-md text-lg font-medium transition duration-300 ease-in-out transform hover:scale-110"
+                >
+                  Contect us
+                </Link>
+              </motion.div>
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -159,6 +173,8 @@ const Navbar = () => {
                   Products
                 </Link>
               </motion.div>
+
+              
 
               <motion.div
                 initial={{ opacity: 0 }}

@@ -51,10 +51,10 @@ export default function ContactSection() {
             <p>
               <span className="font-semibold text-green-700">Email:</span>{" "}
               <a
-                href="mailto:Nadeemalvi@uniroseherbals.com"
+                href="mailto:uniroseherbals@gmail.com"
                 className="text-pink-600 hover:underline"
               >
-                Nadeemalvi@uniroseherbals.com
+                uniroseherbals@gmail.com
               </a>
             </p>
           </motion.div>
