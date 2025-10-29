@@ -1,84 +1,141 @@
+"use client";
+
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import { motion } from "framer-motion";
+import { Big_Shoulders_Text } from "next/font/google";
+
+const Big_Text = Big_Shoulders_Text({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const ProductCategories = () => {
   const categories = [
     {
       id: 1,
       title: "Classical Ayurvedic Formulations",
-      image: "/k1.png", // e.g., mortar-pestle with herbs
+      image: "/k1.png",
       para:
-        "Classical Ayurvedic medicines are prepared strictly as per authoritative texts, using plant, mineral, and rasa-based processes to balance doshas and support holistic healing across preventive and curative care.", // Cite in page content, not code
+        "Prepared according to ancient Ayurvedic texts, these formulations combine herbal, mineral, and rasa-based remedies to restore balance and harmony for preventive and curative wellness.",
       route: "/ProductsCategory/classical_medicine",
     },
     {
       id: 2,
-      title: "Patent/Proprietary Ayurvedic (ASU)",
-      image: "/k2.png", // e.g., labeled bottles in compliant packaging
+      title: "Patent / Proprietary Ayurvedic (ASU)",
+      image: "/k2.png",
       para:
-        "Patent/Proprietary Ayurvedic products follow Ayurveda’s materia medica while using standardized, innovation-led formulations that meet licensing and GMP norms for consistent quality and safety.",
+        "Developed with innovation and scientific validation, our patented Ayurvedic products combine traditional herbs with modern standards for safety, consistency, and efficacy.",
       route: "/ProductsCategory/patented_medicine",
     },
     {
       id: 3,
       title: "OTC Ayurvedic Wellness",
-      image: "/otc.png", // e.g., chyawanprash, oils, kadha visuals
+      image: "/otc.png",
       para:
-        "OTC Ayurvedic products like chyawanprash, herbal oils, and digestive tonics offer convenient daily support for immunity, digestion, skin, and respiratory wellness using time-tested rasayana and herbal blends.",
+        "Convenient Ayurvedic solutions like chyawanprash, herbal oils, and tonics that naturally support immunity, digestion, skin, and respiratory wellness for everyday vitality.",
       route: "/ProductsCategory/otc_medicine",
     },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-t from-slate-50 to-green-300">
-      {/* Hero Section */}
-      <div className="relative w-full h-[150px]">
-        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl md:text-5xl font-bold text-gray-700">
-          Product Category
-        </h1>
-      </div>
+    <section className="relative min-h-screen bg-gradient-to-b from-green-50 via-white to-pink-50 overflow-hidden py-20">
+      {/* 🌿 Floating nature icons */}
+      <motion.span
+        className="absolute top-16 left-10 text-6xl text-green-300/30 select-none"
+        animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      >
+        🌿
+      </motion.span>
+      <motion.span
+        className="absolute bottom-10 right-12 text-5xl text-pink-300/40 select-none"
+        animate={{ y: [0, 15, 0], rotate: [0, -10, 10, 0] }}
+        transition={{ duration: 9, repeat: Infinity }}
+      >
+        🌸
+      </motion.span>
+      <motion.span
+        className="absolute top-1/3 right-1/4 text-6xl text-green-200/40 select-none"
+        animate={{ y: [0, -25, 0], rotate: [0, 5, -5, 0] }}
+        transition={{ duration: 10, repeat: Infinity }}
+      >
+        🍃
+      </motion.span>
 
-      {/* Categories Section */}
-      <div className="container mx-auto px-4 py-10">
+      {/* 🌸 Hero Section */}
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="relative z-10 flex flex-col items-center mb-16 px-4"
+      >
+        <h1
+          className={`${Big_Text.className} text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-green-700 via-emerald-500 to-pink-500 bg-clip-text text-transparent text-center`}
+        >
+          Our Product Categories
+        </h1>
+        <motion.div
+          className="mt-4 h-1 w-24 bg-gradient-to-r from-green-400 to-pink-400 rounded-full"
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        />
+      </motion.div>
+
+      {/* 🌿 Category Cards */}
+      <div className="container mx-auto px-6 md:px-10 z-10 relative">
         {categories.map((category, index) => (
-          <div
+          <motion.div
             key={category.id}
-            className={`flex flex-col md:flex-row items-center gap-8 mb-12 ${
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: index * 0.2 }}
+            viewport={{ once: true }}
+            className={`flex flex-col md:flex-row items-center gap-10 mb-20 ${
               index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
             }`}
           >
-            {/* Image Section */}
-            <div className="w-full md:w-1/2 flex justify-center">
+            {/* 🖼️ Image Section */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 120 }}
+              className="w-full md:w-1/2 flex justify-center"
+            >
               <Image
                 src={category.image}
-                alt={`${category.title} Image`}
+                alt={category.title}
                 width={500}
                 height={500}
-                className="rounded-lg shadow-lg object-cover"
+                className="rounded-3xl shadow-2xl object-cover border-2 border-green-200"
               />
-            </div>
+            </motion.div>
 
-            {/* Text Section */}
+            {/* 🪷 Text Section */}
             <div className="w-full md:w-1/2 text-center md:text-left">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-green-800 mb-4 bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
                 {category.title}
               </h2>
-              {category.para && (
-                <p className="text-gray-600 mb-4 leading-7">
-                  {category.para}
-                </p>
-              )}
-              <Link href={category.route}>
-                <button className="bg-gradient-to-br from-emerald-600 to-emerald-400 hover:from-emerald-700 hover:to-emerald-500 text-white px-4 py-2 rounded mt-4">
-                  Know More
-                </button>
-              </Link>
+              <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
+                {category.para}
+              </p>
+
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Link href={category.route}>
+                  <button className="px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-br from-green-600 to-emerald-400 hover:from-pink-500 hover:to-rose-400 transition-all duration-300 shadow-md hover:shadow-xl">
+                    Know More →
+                  </button>
+                </Link>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+
+      {/* 🌾 Bottom Soft Glow */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-green-200/50 to-transparent" />
+    </section>
   );
 };
 

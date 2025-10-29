@@ -69,7 +69,7 @@ const Navbar = () => {
                   href="/About/AboutFooter"
                   className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium relative group"
                 >
-                  Contect
+                  Contact
                   <motion.div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-green-500 to-[#2abe39] scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                 </Link>
               </motion.div>
@@ -157,7 +157,7 @@ const Navbar = () => {
                   href="/About/AboutFooter"
                   className="text-gray-700 hover:text-green-500 px-4 py-3 rounded-md text-lg font-medium transition duration-300 ease-in-out transform hover:scale-110"
                 >
-                  Contect us
+                  Contact
                 </Link>
               </motion.div>
 
