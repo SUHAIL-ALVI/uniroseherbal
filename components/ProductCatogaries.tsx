@@ -27,7 +27,7 @@ const ProductCategories = () => {
       image: "/k2.png",
       para:
         "Developed with innovation and scientific validation, our patented Ayurvedic products combine traditional herbs with modern standards for safety, consistency, and efficacy.",
-      route: "/ProductsCategory/patented_medicine",
+      route: "/ProductsCategory/patiented_medicine",
     },
     {
       id: 3,
