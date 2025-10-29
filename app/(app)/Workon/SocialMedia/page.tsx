@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Facebook, Twitter } from "lucide-react";
 
 export default function SocialComingSoon() {
   return (
