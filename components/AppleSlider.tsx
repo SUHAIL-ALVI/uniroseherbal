@@ -197,7 +197,7 @@ const data = [
   {
     category: "Cough Syrup ™",
     title: "Cough Rose Syrup",
-    src: "/Cough1.png",
+    src: "/cough1.png",
     content: <DummyContent />,
   },
   {
