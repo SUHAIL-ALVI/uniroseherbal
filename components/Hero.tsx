@@ -34,7 +34,7 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-5xl px-2 lg:text-6xl font-bold text-pink-400 mb-6">
               Unirose Herbals
               <br />
-              <FlipWords words={words} className="text-green-400" />
+              <FlipWords words={words} className="text-green-500" />
             </h1>
             <p className="text-lg mt-10 pt-10 md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
               Welcome to Unirose Herbals, where Ayurveda meets modern wellness.
