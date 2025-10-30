@@ -49,7 +49,7 @@ const DummyContent = () => {
               and dry irritating cough. Formulated with natural ingredients, it
               helps soothe the throat, reduce irritation, and provide relief
               from persistent coughing.
-              {" "} <span className="text-gray-300 font-bold">Available in Two Size 100ml and 200ml</span>
+              {" "} <span className="text-neutral-700 dark:text-neutral-200 font-bold">Available in Two Size 100ml and 200ml</span>
             </p>
             <Image
               src="/cough syrup.jpeg"
@@ -81,7 +81,7 @@ const DummyContent1 = () => {
               in cases of jaundice and an enlarged liver. It helps detoxify the
               liver, promote proper liver function, and restore balance,
               offering relief and aiding in recovery from liver-related issues.
-              {" "} <span className="text-gray-300 font-bold">Available in Two Size 100ml and 200ml</span>
+              {" "} <span className="text-neutral-700 dark:text-neutral-200 font-bold">Available in Two Size 100ml and 200ml</span>
             </p>
             <Image
               src="/jiger syrup.jpeg"
@@ -115,7 +115,7 @@ const DummyContent2 = () => {
               inflammation, clear the skin, and prevent breakouts while also
               alleviating symptoms of allergies, promoting overall skin health
               and well-being.
-              {" "} <span className="text-gray-300 font-bold">Available in Two Size 100ml and 200ml</span>
+              {" "} <span className="text-neutral-700 dark:text-neutral-200 font-bold">Available in Two Size 100ml and 200ml</span>
             </p>
             <Image
               src="/mussafi rose.jpeg"
@@ -149,7 +149,7 @@ const DummyContent3 = () => {
               unique formulation helps improve digestion, reduce discomfort, and
               restore balance in the digestive system, providing effective
               relief from digestive disturbances. 
-              {" "} <span className="text-gray-300 font-bold">Available in Two Size 100ml and 200ml</span>
+              {" "} <span className="text-neutral-700 dark:text-neutral-200 font-bold">Available in Two Size 100ml and 200ml</span>
             </p>
             <Image
               src="/unirosezyme.jpeg"
@@ -179,7 +179,7 @@ const DummyContent4 = () => {
                 Dibe Rose
               </span>{" "}
               Managing diabetes just got simpler. Introducing Dibe Rose Tablets, your natural ally in maintaining healthy blood sugar levels. Rooted in herbal tradition, Dibe Rose is crafted to support your well-being with care. Take a step towards a balanced life
-              {" "} <span className="text-gray-300 font-bold">Available in Tablet Form</span>
+              {" "} <span className="text-neutral-700 dark:text-neutral-200 font-bold">Available in Tablet Form</span>
             </p>
             <Image
               src="/diberose.jpeg"
@@ -214,7 +214,7 @@ const DummyContent5 = () => {
               Unani and Ayurvedic systems of medicine. It is a popular and time-tested 
               natural remedy, most commonly used to relieve symptoms of cold, cough, 
               and congestion. 
-              {" "} <span className="text-gray-300 font-bold">Available in Two Size 100ml and 200ml</span>
+              {" "} <span className="text-neutral-700 dark:text-neutral-200 font-bold">Available in Two Size 100ml and 200ml</span>
             </p>
             <Image
               src="/joshanda.jpeg"

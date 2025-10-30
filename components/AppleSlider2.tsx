@@ -50,7 +50,7 @@ const DummyContent = () => {
               hormonal imbalances, support reproductive health, and reduce
               symptoms associated with these conditions, promoting overall
               well-being for women.
-              {" "} <span className="text-gray-300 font-bold">Available in Two Size 100ml and 200ml</span>
+              {" "} <span className="text-neutral-700 dark:text-neutral-200 font-bold">Available in Two Size 100ml and 200ml</span>
             </p>
             <Image
               src="/lucorose.jpeg"
@@ -82,7 +82,7 @@ const DummyContent1 = () => {
               Introducing Dibe Rose Tablets, your natural ally in maintaining healthy blood sugar levels. 
               Rooted in herbal tradition, Dibe Rose is crafted to support your well-being with care. 
               Take a step towards a balanced life.
-              {" "} <span className="text-gray-300 font-bold">Available in Tablet Form</span>
+              {" "} <span className="text-neutral-700 dark:text-neutral-200 font-bold">Available in Tablet Form</span>
             </p>
             <Image
               src="/lucodibe.jpeg"
