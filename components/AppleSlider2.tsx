@@ -17,7 +17,7 @@ export function AppleCard() {
           className={` items-center justify-center flex flex-col max-w-7xl pl-4 mx-auto  text-4xl md:text-5xl  text-gray-600 dark:text-neutral-600 font-sans`}
         >
           Unirose{" herbals"}
-          <span className="pink-green-500 font-bold">
+          <span className="text-pink-500 font-bold">
             {" "}
             Products
           </span>{" "}
