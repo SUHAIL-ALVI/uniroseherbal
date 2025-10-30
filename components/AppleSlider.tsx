@@ -208,7 +208,7 @@ const DummyContent5 = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">               
-                joshanda
+                Joshanda
               </span>{" "}
               Ayuverdic Joshanda is a traditional herbal decoction (or kaadha) primarily used in the 
               Unani and Ayurvedic systems of medicine. It is a popular and time-tested 
@@ -263,8 +263,8 @@ const data = [
     content: <DummyContent4 />,
   },
   {
-    category: "Dibe Rose ™",
-    title: "Dibe Rose",
+    category: "Joshanda ™",
+    title: "Joshanda",
     src: "/joshanda.jpeg",
     content: <DummyContent5 />,
   },
