@@ -221,7 +221,7 @@ const DummyContent5 = () => {
               alt="Unirose Herbals"
               height="500"
               width="500"
-              className="md:w-1/2 md:h-1/2 h-full mt-7 rounded-lg pt-3 w-full mx-auto object-contain"
+              className="md:w-1/2 md:h-1/2 h-full mt-7 rounded-lg w-full mx-auto object-contain"
             />
           </div>
         );
