@@ -2,12 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-import { Permanent_Marker } from "next/font/google";
 
-const permanent_marker = Permanent_Marker({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+
+
 export function AppleCard() {
   const cards = data.map((card, index) => (
     <Card key={card.src} card={card} index={index} />
@@ -20,7 +17,7 @@ export function AppleCard() {
           className={` items-center justify-center flex flex-col max-w-7xl pl-4 mx-auto  text-4xl md:text-5xl  text-gray-600 dark:text-neutral-600 font-sans`}
         >
           Unirose{" herbals"}
-          <span className={`${permanent_marker.className} text-pink-400`}>
+          <span className="pink-green-500 font-bold">
             {" "}
             Products
           </span>{" "}
@@ -46,20 +43,21 @@ const DummyContent = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                Luco Rose
+                Leuco Rose
               </span>{" "}
               is a specialized herbal remedy beneficial for managing PCOD
               (Polycystic Ovarian Disease) and leucorrhea. It helps regulate
               hormonal imbalances, support reproductive health, and reduce
               symptoms associated with these conditions, promoting overall
               well-being for women.
+              {" "} <span className="text-gray-300 font-bold">Available in Two Size 100ml and 200ml</span>
             </p>
             <Image
               src="/lucorose.jpeg"
               alt="lucorose syrup"
               height="500"
               width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+              className="md:w-1/2 md:h-1/2 h-full mt-7 rounded-lg w-full mx-auto object-contain"
             />
           </div>
         );
@@ -78,19 +76,20 @@ const DummyContent1 = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-               Dibe Rose
+               Leuco off Rose
               </span>{" "}
               Managing diabetes just got simpler. 
               Introducing Dibe Rose Tablets, your natural ally in maintaining healthy blood sugar levels. 
               Rooted in herbal tradition, Dibe Rose is crafted to support your well-being with care. 
-              Take a step towards a balanced life
+              Take a step towards a balanced life.
+              {" "} <span className="text-gray-300 font-bold">Available in Tablet Form</span>
             </p>
             <Image
-              src="/diberose.jpeg"
-              alt="diberose"
+              src="/lucodibe.jpeg"
+              alt="luco off rose tablets"
               height="500"
               width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+              className="md:w-1/2 md:h-1/2 h-full w-full mt-7 rounded-lg mx-auto object-contain"
             />
           </div>
         );
@@ -124,7 +123,7 @@ const DummyContent2 = () => {
               alt="Unirose Herbals"
               height="500"
               width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+              className="md:w-1/2 md:h-1/2 h-full mt-7 rounded-lg w-full mx-auto object-contain"
             />
           </div>
         );
@@ -158,7 +157,7 @@ const DummyContent3 = () => {
               alt="Unirose Herbals"
               height="500"
               width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+              className="md:w-1/2 md:h-1/2 h-full mt-7 rounded-lg w-full mx-auto object-contain"
             />
           </div>
         );
@@ -171,15 +170,15 @@ const DummyContent3 = () => {
 
 const data = [
   {
-    category: "Luco Syrup ™",
-    title: "Luco Rose Syrup",
+    category: "Leuco Syrup ™",
+    title: "Leuco Rose Syrup",
     src: "/lucorose.jpeg",
     content: <DummyContent />,
   },
   {
-    category: "Luco Dibe",
-    title: "Luco Dibe",
-    src: "/diberose.jpeg",
+    category: "Leuco off rose ™",
+    title: "Leuco off rose",
+    src: "/lucodibe.jpeg",
     content: <DummyContent1 />,
   },
   {

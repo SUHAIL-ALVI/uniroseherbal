@@ -60,6 +60,24 @@ export default function ContactSection() {
           </motion.div>
 
           <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="flex items-center gap-4"
+          >
+            <Mail className="text-pink-600 w-6 h-6" />
+            <p>
+              <span className="font-semibold text-green-700">Email order related query:</span>{" "}
+              <a
+                href="mailto:Nadeemalvi@uniroseherbals.com"
+                className="text-pink-600 hover:underline"
+              >
+                Nadeemalvi@uniroseherbals.com
+              </a>
+            </p>
+          </motion.div>
+
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
@@ -78,6 +96,25 @@ export default function ContactSection() {
           </motion.div>
 
           <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex items-center gap-4"
+          >
+            <Phone className="text-pink-600 w-6 h-6" />
+            <p>
+              <span className="font-semibold text-green-700">Customer Care:</span>{" "}
+              <a
+                href="tel:+918533995433"
+                className="text-pink-600 hover:underline"
+              >
+                +91 8533995433
+              </a>
+            </p>
+          </motion.div>
+
+
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
@@ -86,7 +123,7 @@ export default function ContactSection() {
             <MapPin className="text-pink-600 w-6 h-6" />
             <p>
               <span className="font-semibold text-green-700">Location:</span>{" "}
-              Alpha-2 Greater Noida GTB Nagar UP India 201301  <span className="text-blue-600">(Office)</span>
+              Delhi -NCR Office- Alpha 2, Greater Noida, Gautam Buddha Nagar,U.P-201308  <span className="text-blue-600">(Office)</span>
             </p>
           </motion.div>
 
@@ -100,7 +137,7 @@ export default function ContactSection() {
             <MapPin className="text-pink-600 w-6 h-6" />
             <p>
               <span className="font-semibold text-green-700">Location:</span>{" "}
-              Delhi Road Hapur Uttar Pradesh India 245101 <span className="text-blue-600">(Wharehouse)</span>
+              UP WEST OFFICE & {" "}<span className="text-blue-600">(Warehouse)</span>
             </p>
           </motion.div>
         </div>
