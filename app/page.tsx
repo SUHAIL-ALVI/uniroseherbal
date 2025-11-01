@@ -6,6 +6,7 @@ import HeroSection from "@/components/Hero";
 import KnowMoreUnirose from "@/components/KnowMoreUnirose";
 import ProductCatogaries from "@/components/ProductCatogaries";
 
+
 import React from "react";
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
       <AppleCard />
       <ProductCatogaries />
       <KnowMoreUnirose />
-
+      
       <Footer />
     </div>
   );
