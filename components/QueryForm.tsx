@@ -64,7 +64,7 @@ export default function QueryForm() {
             className="flex flex-col items-center space-y-4"
           >
             <Image
-              src="/logo2.png"
+              src="/Logo2.png"
               alt="Unirose Herbals"
               width={180}
               height={60}
