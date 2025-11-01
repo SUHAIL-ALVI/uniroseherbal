@@ -94,7 +94,7 @@ export default function QueryForm() {
           viewport={{ once: true }}
           className="w-full md:w-1/2 p-8 sm:p-10 space-y-5 bg-white/70 backdrop-blur-xl"
         >
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-center bg-gradient-to-r from-green-700 to-pink-500 text-transparent bg-clip-text mb-3">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-center bg-gradient-to-r from-pink-500 via-rose-400 to-rose-200 text-transparent bg-clip-text mb-3">
             Send a Query
           </h3>
 
@@ -161,7 +161,7 @@ export default function QueryForm() {
             whileTap={{ scale: 0.97 }}
             type="submit"
             disabled={isSubmitting}
-            className="w-full rounded-full bg-gradient-to-r from-green-600 to-pink-500 text-white px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-70"
+            className="w-full rounded-full bg-gradient-to-r from-pink-500 via-rose-400 to-rose-200 text-white px-6 py-3 font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-70"
           >
             {isSubmitting ? "Sending..." : "Submit Query"}
           </motion.button>

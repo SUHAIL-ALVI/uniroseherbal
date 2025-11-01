@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Spotlight } from "./ui/Spotlight";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import EnhancedMarquee from "./Marquee";
 
 const HeroSection = () => {
   const words = ["Rooted in Nature", "Thriving in Health", "Modern Herbal"];
@@ -86,6 +87,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </div>
+      <EnhancedMarquee />
     </div>
   );
 };

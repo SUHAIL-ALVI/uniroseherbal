@@ -4,6 +4,7 @@ import Footer from "@/components/Footer2";
 import HeroSection from "@/components/Hero";
 
 import KnowMoreUnirose from "@/components/KnowMoreUnirose";
+
 import ProductCatogaries from "@/components/ProductCatogaries";
 
 
@@ -12,7 +13,7 @@ import React from "react";
 const Home = () => {
   return (
     <div>
-      <HeroSection />
+      <HeroSection />   
       <AppleCards />
       <AppleCard />
       <ProductCatogaries />
