@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start space-y-3">
             <div className="flex items-center gap-3">
               <Image
-                src="/logo2.png"
+                src="/Logo2.png"
                 alt="Unirose Herbals Logo"
                 width={50}
                 height={50}
