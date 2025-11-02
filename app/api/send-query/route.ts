@@ -38,16 +38,16 @@ const mailOptions = {
   to: recipient,
   subject: `🌿 New Customer Query — ${name}`,
   html: `
-  <div style="background:linear-gradient(135deg,#fdfdfd,#f8faf9); padding:40px 0; font-family:'Poppins',Arial,sans-serif;">
-    <table style="max-width:640px; margin:auto; background:rgba(255,255,255,0.75); backdrop-filter:blur(12px); border-radius:20px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.08); border:1px solid rgba(255,255,255,0.4);">
+  <div style="background:linear-gradient(135deg,#fdfdfd,#f8faf9); font-family:'Poppins',Arial,sans-serif; padding:40px 0; color:#222;">
+    <table style="max-width:680px; margin:auto; background:rgba(255,255,255,0.6); border-radius:24px; overflow:hidden; backdrop-filter:blur(20px); box-shadow:0 8px 40px rgba(0,0,0,0.08); border:1px solid rgba(255,255,255,0.4);">
       
       <!-- Header -->
       <thead>
         <tr>
-          <td style="text-align:center; padding:40px 20px; background:linear-gradient(120deg,rgba(72,196,99,0.9),rgba(232,80,143,0.9)); color:#fff;">
-            <img src="https://uniroseherbals.com/Logo2.png" alt="Unirose Herbals" width="90" style="border-radius:12px; background:white; padding:6px; box-shadow:0 3px 12px rgba(0,0,0,0.15);" />
-            <h1 style="margin:14px 0 6px; font-size:26px; letter-spacing:0.5px;">Unirose Herbals</h1>
-            <p style="font-size:14px; color:#eafbe9; margin:0;">Rooted in Nature · Thriving in Health</p>
+          <td style="text-align:center; background:linear-gradient(120deg,#47C363,#E8508F); padding:50px 30px;">
+            <img src="https://uniroseherbals.com/Logo2.png" alt="Unirose Herbals" width="95" style="border-radius:14px; background:white; padding:6px; box-shadow:0 3px 12px rgba(0,0,0,0.1);" />
+            <h1 style="margin:20px 0 6px; font-size:28px; color:white; letter-spacing:0.4px;">Unirose Herbals</h1>
+            <p style="color:rgba(255,255,255,0.9); font-size:14px; margin:0;">Rooted in Nature · Thriving in Health</p>
           </td>
         </tr>
       </thead>
@@ -55,24 +55,42 @@ const mailOptions = {
       <!-- Body -->
       <tbody>
         <tr>
-          <td style="padding:40px 30px;">
-            <h2 style="color:#148E3C; font-size:20px; margin-bottom:16px;">🌺 New Query from ${name}</h2>
-            <p style="color:#555; font-size:15px; line-height:1.6; margin-bottom:28px;">
-              You’ve received a new inquiry through the <strong>Unirose Herbals</strong> website. Here are the details:
+          <td style="padding:50px 40px 40px;">
+            <h2 style="color:#148E3C; font-size:22px; margin-bottom:16px;">🌸 New Customer Query Received</h2>
+            <p style="font-size:15px; color:#444; line-height:1.8; margin-bottom:28px;">
+              <strong>${name}</strong> has sent a new query through your <strong>Unirose Herbals</strong> website.
             </p>
 
-            <div style="background:rgba(255,255,255,0.8); border:1px solid rgba(232,80,143,0.15); border-radius:14px; padding:20px 24px; box-shadow:inset 0 1px 6px rgba(0,0,0,0.05);">
-              <p style="margin:10px 0;"><strong style="color:#148E3C;">👤 Name:</strong> ${name}</p>
-              <p style="margin:10px 0;"><strong style="color:#148E3C;">📧 Email:</strong> ${email}</p>
-              <p style="margin:10px 0;"><strong style="color:#148E3C;">📞 Contact:</strong> ${contact}</p>
-              <p style="margin:10px 0;"><strong style="color:#148E3C;">💬 Message:</strong></p>
-              <p style="background:rgba(255,255,255,0.9); border-left:4px solid #E8508F; padding:14px 16px; border-radius:10px; color:#333; font-size:14px; line-height:1.6; box-shadow:0 1px 3px rgba(0,0,0,0.05);">${query}</p>
+            <!-- Info Card -->
+            <div style="background:rgba(255,255,255,0.8); border:1px solid rgba(232,80,143,0.15); border-radius:18px; padding:24px 28px; box-shadow:inset 0 1px 6px rgba(0,0,0,0.05);">
+              <table style="width:100%; border-collapse:collapse;">
+                <tr>
+                  <td style="padding:8px 0;"><strong style="color:#148E3C;">👤 Name:</strong></td>
+                  <td style="padding:8px 0; color:#333;">${name}</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 0;"><strong style="color:#148E3C;">📧 Email:</strong></td>
+                  <td style="padding:8px 0; color:#333;">${email}</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 0;"><strong style="color:#148E3C;">📞 Contact:</strong></td>
+                  <td style="padding:8px 0; color:#333;">${contact}</td>
+                </tr>
+              </table>
+
+              <div style="margin-top:16px;">
+                <p style="margin-bottom:6px; font-weight:600; color:#E8508F;">💬 Message</p>
+                <div style="background:rgba(255,255,255,0.9); border-left:4px solid #E8508F; padding:16px 18px; border-radius:10px; color:#333; font-size:14px; line-height:1.7; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+                  ${query}
+                </div>
+              </div>
             </div>
 
-            <div style="text-align:center; margin-top:36px;">
-              <a href="https://uniroseherbals.com" 
-                style="background:linear-gradient(135deg,#47C363,#E8508F); color:white; text-decoration:none; padding:14px 34px; font-size:15px; border-radius:40px; font-weight:600; box-shadow:0 6px 14px rgba(72,196,99,0.3); display:inline-block; transition:all 0.3s ease;">
-                🌿 View Dashboard
+            <!-- Button -->
+            <div style="text-align:center; margin-top:40px;">
+              <a href="https://uniroseherbals.com"
+                style="display:inline-block; padding:14px 36px; background:linear-gradient(135deg,#E8508F,#47C363); color:#fff; border-radius:40px; text-decoration:none; font-weight:600; font-size:15px; box-shadow:0 6px 16px rgba(232,80,143,0.3), 0 2px 6px rgba(71,195,99,0.25); transition:all 0.3s ease;">
+                🌿 Open Dashboard
               </a>
             </div>
           </td>
@@ -82,9 +100,9 @@ const mailOptions = {
       <!-- Footer -->
       <tfoot>
         <tr>
-          <td style="text-align:center; background:rgba(250,250,250,0.7); padding:20px 10px; font-size:12px; color:#666; border-top:1px solid rgba(232,80,143,0.1);">
+          <td style="text-align:center; background:rgba(255,255,255,0.4); padding:22px 10px; font-size:12px; color:#666; border-top:1px solid rgba(232,80,143,0.1);">
             <p style="margin:0;">© ${new Date().getFullYear()} <strong style="color:#148E3C;">Unirose Herbals</strong>. All Rights Reserved.</p>
-            <p style="margin:6px 0 0; color:#81C784;">This is an automated message — please do not reply.</p>
+            <p style="margin:6px 0 0; color:#81C784;">This email was generated automatically — please do not reply.</p>
           </td>
         </tr>
       </tfoot>
@@ -93,6 +111,7 @@ const mailOptions = {
   </div>
   `,
 };
+
 
 
 
