@@ -1,79 +1,119 @@
 "use client";
 import React from "react";
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Facebook, Twitter, Instagram, Mail } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <motion.footer
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="bg-gradient-to-t from-green-100 via-pink-50 to-white text-gray-700 py-8 shadow-inner"
+      className="relative overflow-hidden bg-gradient-to-b from-white via-pink-50/50 to-green-50/50 text-gray-700 pt-12 pb-8 shadow-inner border-t border-pink-100/50"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 🌸 Main Footer Content */}
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-          {/* 🔗 Links Section */}
-          <div className="flex space-x-8 text-center md:text-left">
+      {/* 🌸 Decorative Glow */}
+      <div className="absolute inset-0 bg-gradient-to-t from-green-100/10 via-pink-100/20 to-transparent pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8">
+        {/* 🪴 Top Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          {/* 🌿 Logo and tagline */}
+          <div className="flex flex-col items-center md:items-start space-y-3">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo2.png"
+                alt="Unirose Herbals Logo"
+                width={50}
+                height={50}
+                className="rounded-full object-contain"
+              />
+              <h2 className="text-lg font-bold text-gray-800">
+                Unirose <span className="text-pink-600">Herbals</span>
+              </h2>
+            </div>
+            
+          </div>
+
+          {/* 🔗 Links */}
+          <div className="flex flex-wrap justify-center gap-6 text-sm font-medium">
             <Link
               href="/About/AboutDetails"
-              className="text-gray-700 hover:text-pink-600 font-medium transition-all duration-300 hover:scale-105"
+              className="hover:text-pink-600 transition-colors duration-300"
             >
               About
             </Link>
             <Link
               href="/About/AboutFooter"
-              className="text-gray-700 hover:text-pink-600 font-medium transition-all duration-300 hover:scale-105"
+              className="hover:text-pink-600 transition-colors duration-300"
             >
               Contact
             </Link>
             <Link
               href="/PrivacyPolicy"
-              className="text-gray-700 hover:text-pink-600 font-medium transition-all duration-300 hover:scale-105"
+              className="hover:text-pink-600 transition-colors duration-300"
             >
               Privacy Policy
             </Link>
+            <Link
+              href="/Products"
+              className="hover:text-pink-600 transition-colors duration-300"
+            >
+              Products
+            </Link>
           </div>
 
-          {/* 🌿 Social Media Icons */}
-          <div className="flex space-x-6">
-            <Link
+          {/* 🌺 Social Icons */}
+          <div className="flex space-x-5">
+            <motion.a
               href="/Workon/SocialMedia"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-pink-600 transition-transform duration-300 hover:scale-110"
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              className="p-2 rounded-full bg-white/60 hover:bg-pink-100/70 shadow-md"
             >
-              <Facebook size={24} />
-            </Link>
-            <Link
+              <Facebook size={20} className="text-gray-600" />
+            </motion.a>
+            <motion.a
               href="/Workon/SocialMedia"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-pink-600 transition-transform duration-300 hover:scale-110"
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              className="p-2 rounded-full bg-white/60 hover:bg-pink-100/70 shadow-md"
             >
-              <Twitter size={24} />
-            </Link>
-            <Link
+              <Twitter size={20} className="text-gray-600" />
+            </motion.a>
+            <motion.a
               href="https://www.instagram.com/unirose_herbals/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-pink-600 transition-transform duration-300 hover:scale-110"
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              className="p-2 rounded-full bg-white/60 hover:bg-pink-100/70 shadow-md"
             >
-              <Instagram size={24} />
-            </Link>
+              <Instagram size={20} className="text-gray-600" />
+            </motion.a>
+            <motion.a
+              href="mailto:uniroseherbals@gmail.com"
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              className="p-2 rounded-full bg-white/60 hover:bg-pink-100/70 shadow-md"
+            >
+              <Mail size={20} className="text-gray-600" />
+            </motion.a>
           </div>
         </div>
 
-        {/* 🌺 Divider */}
-        <div className="border-t border-gray-300 my-6 opacity-50" />
+        {/* Divider */}
+        <div className="my-8 border-t border-gray-300/50" />
 
-        {/* 💬 Footer Text */}
-        <div className="text-center text-gray-600 text-sm space-y-1">
-          <p>&copy; 2025 Unirose Herbals. All rights reserved.</p>
-          <p className="text-pink-600 font-semibold tracking-wide">
-            Developed by Suhail Alvi with ❤️
+        {/* 💬 Bottom Text */}
+        <div className="text-center text-gray-600 text-sm">
+          <p>&copy; 2025 <span className="font-semibold text-pink-600">Unirose Herbals</span>. All rights reserved.</p>
+          <p className="text-xs mt-1">
+            Build by{" "}
+            <span className="font-semibold text-green-600 hover:text-pink-600 transition">
+              Suhail Alvi
+            </span>
           </p>
         </div>
       </div>

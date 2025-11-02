@@ -40,7 +40,7 @@ export default function SocialComingSoon() {
         transition={{ duration: 0.6 }}
         className="text-4xl md:text-5xl font-bold text-green-700 mb-4"
       >
-        We’re Coming Soon on Social Media 🌸
+        We’re Coming Soon on <span className="text-blue-700">Facebook</span> & <span className="text-black">X</span> Do Check out <span className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600">Instagram</span>  🌸
       </motion.h1>
 
       {/* Subtitle */}
@@ -50,7 +50,7 @@ export default function SocialComingSoon() {
         transition={{ delay: 0.3 }}
         className="text-gray-600 text-lg max-w-xl mx-auto mb-10"
       >
-        Stay tuned — soon you&apos;ll be able to connect with us on your favorite
+        Stay tuned — <span className="text-pink-600 font-bold">Already on instagram</span> soon you&apos;ll be able to connect with us on your favorite
         social platforms! 💫
       </motion.p>
 
